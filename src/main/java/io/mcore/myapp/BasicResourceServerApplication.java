@@ -1,4 +1,4 @@
-package io.mcore.ride.sharing;
+package io.mcore.myapp;
 
 import java.security.Principal;
 import java.util.UUID;
@@ -6,7 +6,6 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
@@ -32,7 +31,7 @@ public class BasicResourceServerApplication extends ResourceServerConfigurerAdap
 	
 	@RequestMapping("/data")
     public String readFoo() {
-        return "read foo " + UUID.randomUUID().toString();
+        return "read data " + UUID.randomUUID().toString();
     }
 	
 	@Override

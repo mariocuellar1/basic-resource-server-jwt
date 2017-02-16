@@ -1,4 +1,4 @@
-package io.mcore.ride.sharing;
+package io.mcore.myapp;
 
 import java.io.IOException;
 

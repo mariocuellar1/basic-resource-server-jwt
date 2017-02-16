@@ -1,4 +1,4 @@
-package io.mcore.ride.sharing;
+package io.mcore.myapp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

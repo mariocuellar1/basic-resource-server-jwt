@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>io.mcore.ride.sharing</groupId>
-	<artifactId>basic-resource-server</artifactId>
+	<groupId>io.mcore.myapp</groupId>
+	<artifactId>basic-resource-server-jwt</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
