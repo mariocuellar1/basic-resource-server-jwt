@@ -1,0 +1,215 @@
+{
+	"variables": [],
+	"info": {
+		"name": "JwtResourceServerTest",
+		"_postman_id": "8c30632d-5da1-0d21-4e73-0cd130e1cc68",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token - password",
+			"request": {
+				"url": "http://localhost:40051/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWNtZTphY21lc2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "scope",
+							"value": "read",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Token - client_credentials",
+			"request": {
+				"url": "http://localhost:40051/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWNtZTphY21lc2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Token - checktoken",
+			"request": {
+				"url": "http://localhost:40051/oauth/check_token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWNtZTphY21lc2VjcmV0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODc2MzEwMjUsInVzZXJfbmFtZSI6InVzZXIxIiwiYXV0aG9yaXRpZXMiOlsiVVNFUiIsIkFETUlOIl0sImp0aSI6ImI1MjgwNzVhLWQ5MTMtNGI0ZC04YjkwLTAzNjdiYzNhNGRiNyIsImNsaWVudF9pZCI6ImFjbWUiLCJzY29wZSI6WyJyZWFkIl19.ZVAiIRcS9usBmEZrWJGrPjnRzbS3dcj1Ca-P9FHv7ionQtP1awYBywGvrQfrUjoNIFqYR7xt1GV_kQbfvKhIFM4o6T2hu_WM1wJmnKpSURGOwPGArz2o8oGvaxJAc-2FenhKsgc5-yief8JbPiNqibI3u8cWHpRGos8NGtVt-dAfRnJSdO54gi-2hexZ7rW4ru1UPRhV4F2oQe33beW_oUli_GGWnBYmDSPawaX7I0ZvT0-FhJ2KmWR3KvWdYcZx6upW4EePHQg3aPBz4FqonXOLcw42DGqwl_TNsZFw02ByRJbfXWDc3fEScPt4qe1i-1hSQuiqMBFAVmWAleN2EA",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Resource get ME Data",
+			"request": {
+				"url": "http://localhost:8080/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODc2MzEwMjUsInVzZXJfbmFtZSI6InVzZXIxIiwiYXV0aG9yaXRpZXMiOlsiVVNFUiIsIkFETUlOIl0sImp0aSI6ImI1MjgwNzVhLWQ5MTMtNGI0ZC04YjkwLTAzNjdiYzNhNGRiNyIsImNsaWVudF9pZCI6ImFjbWUiLCJzY29wZSI6WyJyZWFkIl19.ZVAiIRcS9usBmEZrWJGrPjnRzbS3dcj1Ca-P9FHv7ionQtP1awYBywGvrQfrUjoNIFqYR7xt1GV_kQbfvKhIFM4o6T2hu_WM1wJmnKpSURGOwPGArz2o8oGvaxJAc-2FenhKsgc5-yief8JbPiNqibI3u8cWHpRGos8NGtVt-dAfRnJSdO54gi-2hexZ7rW4ru1UPRhV4F2oQe33beW_oUli_GGWnBYmDSPawaX7I0ZvT0-FhJ2KmWR3KvWdYcZx6upW4EePHQg3aPBz4FqonXOLcw42DGqwl_TNsZFw02ByRJbfXWDc3fEScPt4qe1i-1hSQuiqMBFAVmWAleN2EA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Resource get private Admin info",
+			"request": {
+				"url": "http://localhost:8080/only_for_admin",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0ODc2MzEwMjUsInVzZXJfbmFtZSI6InVzZXIxIiwiYXV0aG9yaXRpZXMiOlsiVVNFUiIsIkFETUlOIl0sImp0aSI6ImI1MjgwNzVhLWQ5MTMtNGI0ZC04YjkwLTAzNjdiYzNhNGRiNyIsImNsaWVudF9pZCI6ImFjbWUiLCJzY29wZSI6WyJyZWFkIl19.ZVAiIRcS9usBmEZrWJGrPjnRzbS3dcj1Ca-P9FHv7ionQtP1awYBywGvrQfrUjoNIFqYR7xt1GV_kQbfvKhIFM4o6T2hu_WM1wJmnKpSURGOwPGArz2o8oGvaxJAc-2FenhKsgc5-yief8JbPiNqibI3u8cWHpRGos8NGtVt-dAfRnJSdO54gi-2hexZ7rW4ru1UPRhV4F2oQe33beW_oUli_GGWnBYmDSPawaX7I0ZvT0-FhJ2KmWR3KvWdYcZx6upW4EePHQg3aPBz4FqonXOLcw42DGqwl_TNsZFw02ByRJbfXWDc3fEScPt4qe1i-1hSQuiqMBFAVmWAleN2EA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Resource get write scope info",
+			"request": {
+				"url": "http://localhost:8080/only_scope_write",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNDg3NjMxMjM0LCJqdGkiOiI0ZDA3ZGEzZS0zZDcyLTQzMjItOWRiNC1lYTNjYzNjY2Y1YzkiLCJjbGllbnRfaWQiOiJhY21lIn0.PrtR7h89569vLJorXt6fSBkKnuzB6aN-UmtqKx4C7EfgZBC1KvsSB5s2_ctmW4FjTpUZZeEG3xgwvLtxeVr_z4oKRzrV5jxu-HYfmy1KPCM_YeLVAuWb_41rTteqpFRJgo13lz6T05Ul2novoRpLaEHmH7pFxa6g4kSF5aD1f2f2W3qa0dKkLgVCR1T91wnVcXFKSnKknjyM4xWDD6DFgdXybp29F5Iy962Py4-WEgl2wzo_Q9iWEmKaLatzCfFkADO2XQbBGcq8Lo0T3lw7UO4PFbVchEwwQR4dgllEHNUfELMAiyVK0oKmg9ulgtpbhAJHc-rG2815-yN6Dms_WQ",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

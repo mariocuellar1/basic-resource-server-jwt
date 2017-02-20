@@ -38,4 +38,10 @@ public class JwtConfiguration {
         converter.setVerifierKey(publicKey);
         return converter;
     }
+    
+    /*
+    @Override
+    public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+        resources.resourceId("myapp").tokenStore(tokenStore());
+    }*/
 }
